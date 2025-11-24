@@ -5,12 +5,17 @@ Escolha seu idioma / Choose your language:
 - 🇧🇷 **Português (Brasil)** → [`README pt-BR`](docs/README.pt-BR.md)
 - 🇺🇸 **English (US)** → [`README en-US`](docs/README.en-US.md)
 
-
 - 🇧🇷
 Ambos os arquivos contêm o guia completo de execução, conceitos, demonstrações e referências do projeto. Atualize o idioma desejado para manter a documentação sincronizada.
 
 - 🇺🇸
 Both files contain the complete project execution guide, concepts, demonstrations, and references. Update to your desired language to keep the documentation synchronized.
+
+---
+
+# Delivery
+
+- [Delivery Points](docs/DeliveryPoints.md)
 
 
 ## Paper and inspiration
