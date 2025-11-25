@@ -26,8 +26,8 @@ defmodule ExampleSessionType do
     print_header("EXAMPLE: Authentication")
 
     client =
-      SessionType.output(:username,
-        SessionType.output(:password,
+      SessionType.sender(:username,
+        SessionType.sender(:password,
           SessionType.recv(:token, SessionType.end_session())
         )
       )
@@ -39,7 +39,7 @@ defmodule ExampleSessionType do
     print_header("EXAMPLE: File Transfer")
 
     client =
-      SessionType.output(:filename,
+      SessionType.sender(:filename,
         SessionType.recv(:file_content,
           SessionType.recv(:checksum, SessionType.end_session())
         )

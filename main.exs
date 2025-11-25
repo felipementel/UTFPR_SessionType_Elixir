@@ -13,7 +13,7 @@ IO.puts(String.duplicate("-", 50))
 IO.puts("EXAMPLE 1: !⟨int⟩ followed by ?⟨string⟩")
 IO.puts(String.duplicate("-", 50))
 
-client = SessionType.output(:int, SessionType.recv(:string, SessionType.end_session()))
+client = SessionType.sender(:int, SessionType.recv(:string, SessionType.end_session()))
 server = SessionType.dual(client)
 
 IO.puts("Client = #{ProtocolChecker.format(client)}")
@@ -27,7 +27,7 @@ IO.puts("\n" <> String.duplicate("-", 50))
 IO.puts("EXAMPLE 2: ?⟨bool⟩ followed by !⟨ack⟩")
 IO.puts(String.duplicate("-", 50))
 
-server_first = SessionType.recv(:bool, SessionType.output(:ack, SessionType.end_session()))
+server_first = SessionType.recv(:bool, SessionType.sender(:ack, SessionType.end_session()))
 client_first = SessionType.dual(server_first)
 
 IO.puts("Server = " <> ProtocolChecker.format(server_first))

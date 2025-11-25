@@ -3,7 +3,7 @@ defmodule SessionType do
   Minimal session type model focusing on output (!), input (?) and end (1).
   """
 
-  defstruct [:type, :data, :next]
+  defstruct [:type, :data, :next] # protocol nodes
 
   @doc """
   Output session type: S!⟨T⟩.S'
@@ -14,7 +14,7 @@ defmodule SessionType do
   . chains the next step in the protocol.
   S' (or “next”) is the rest of the conversation after this transmission.
   """
-  def output(value_type, next \\ end_session()) do
+  def sender(value_type, next \\ end_session()) do # like send
     %__MODULE__{type: :send, data: value_type, next: next}
   end
 
@@ -25,8 +25,8 @@ defmodule SessionType do
   . chains the next step in the protocol.
   S' (or “next”) is the rest of the conversation after this reception.
   """
-  def recv(value_type, next \\ end_session()) do
-    %__MODULE__{type: :recv, data: value_type, next: next}
+  def recv(value_type, next \\ end_session()) do # receive
+    %__MODULE__{type: :recv, data: value_type, next: next} # return struct
   end
 
   @doc """
@@ -45,7 +45,7 @@ defmodule SessionType do
   end
 
   def dual(%__MODULE__{type: :recv, data: value_type, next: next}) do
-    output(value_type, dual(next))
+    sender(value_type, dual(next))
   end
 
   def dual(%__MODULE__{type: :end}) do
