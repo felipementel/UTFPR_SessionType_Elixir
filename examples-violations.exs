@@ -1,13 +1,13 @@
 #!/usr/bin/env elixir
 
-# Exemplos simples onde os protocolos NÃO são compatíveiSessionType.
+# Examples simple where protocols are NOT compatible.
 
 IO.puts("\n" <> String.duplicate("=", 50))
 IO.puts("Compatibility Violations")
 IO.puts(String.duplicate("=", 50) <> "\n")
 
 # ---------------------------------------------------------------------------
-# Caso 1: Mesma ordem, tipos diferentes
+# Case 1: Same order, different types
 # ---------------------------------------------------------------------------
 IO.puts(String.duplicate("-", 50))
 IO.puts("CASE 1: Client sends :int but server expects :string")
