@@ -3,7 +3,7 @@
 # Minimal demonstration of session types focusing on send/receive.
 
 IO.puts("\n" <> String.duplicate("=", 50))
-IO.puts("DEMONSTRAÇÃO: Session Types")
+IO.puts("DEMONSTRATION: Session Types")
 IO.puts(String.duplicate("=", 50) <> "\n")
 
 # ---------------------------------------------------------------------------
