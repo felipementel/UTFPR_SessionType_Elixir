@@ -14,7 +14,7 @@ defmodule SessionType do
   . chains the next step in the protocol.
   S' (or “next”) is the rest of the conversation after this transmission.
   """
-  def sender(value_type, next \\ end_session()) do # like send
+  def sender(value_type, next \\ end_session()) do
     %__MODULE__{type: :send, data: value_type, next: next}
   end
 
