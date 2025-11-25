@@ -7,6 +7,7 @@ defmodule SessionType do
 
   @doc """
   Output session type: S!⟨T⟩.S'
+  S actual state of the session type.
   ⟨⟩ angle brackets, dellineating the type being sent.
   ! indicates sending (output).
   ⟨T⟩ indicates the type of value being transmitted.
