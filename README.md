@@ -29,3 +29,9 @@ https://dl.acm.org/doi/10.1145/3747519
 ## About the motivation
 
 This project is a part of the Master's program at UTFPR (Universidade Tecnológica Federal do Paraná) and classes at Introduction to Functional Programming (IFP) with [Adolpho Neto](https://github.com/adolfont) Teacher. Based on https://github.com/adolfont/caes005-introduction-to-functional-programming
+
+
+---
+
+> [!NOTE]
+> This project was created by Felipe Augusto and improved and revised with the help of GitHub Copilot.
